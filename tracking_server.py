@@ -1,5 +1,6 @@
 from flask import Flask, request, send_file
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
@@ -18,5 +19,8 @@ def track_email_open():
     # Return a 1x1 transparent pixel
     return send_file('pixel.png', mimetype='image/png')
 
+
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
