@@ -1,0 +1,13 @@
+# Sensitive config files
+config/token.json
+config/client_secret_*.json
+
+# Excel data
+finance/Sample Data.xlsx
+
+# Logs
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
